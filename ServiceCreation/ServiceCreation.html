@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang='en'>
+   <head>   
+        <title>Service creation for OCI to OCI</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        .image2{
+            content: url('http://solutionengineering-devops.us.oracle.com/excellence/css/images/Slide2.PNG');
+            float: right;
+            height: 400px;
+        }
+        .image3{
+            content: url('http://solutionengineering-devops.us.oracle.com/excellence/css/images/Slide3.PNG');
+            float: right;
+            height: 400px;
+        }
+        .image4{
+            content: url('http://solutionengineering-devops.us.oracle.com/excellence/css/images/Slide4.PNG');
+            float: right;
+            height: 400px;
+        }
+        .image5{
+            content: url('http://solutionengineering-devops.us.oracle.com/excellence/css/images/Slide5.PNG');
+            float: right;
+            height: 400px;
+        }
+        .text1{
+            float: left;
+            display: -webkit-box;
+            clear: both;
+        }
+        .modal-content{
+            width:fit-content;
+        }
+        .tcard {
+            background-color: #fff;
+            border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+            border-radius: 5px;
+            margin: 20px auto 20px;
+            max-width: fit-content;
+            -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+        }
+        tbody>tr>td:nth-child(1) {
+            color: #449FD1;
+            padding-left: 30px;
+            text-decoration: none;
+        }
+        tbody>tr>td {
+            vertical-align: top;
+        }
+        td {
+            padding: 15px;
+            border-right: 1px solid #efefef;
+        }
+        </style>
+   </head>
+   <body class="tcard">
+        <table>
+            <tbody>
+                <tr >
+                    <td>
+                        <button data-toggle="modal" data-target="#myModal" class="btn btn-primary" id="step1">Step1</button>
+                    </td>
+                    <td>
+                        <div class="text1">
+                            <p>New Engagement</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="text1">
+                            <ul>
+                                <li>Account (Customer Name)</li>
+                                <li>Continue without Account or Opportunity</li>
+                                <li>Opportunity ID</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button data-toggle="modal" data-target="#myModal" class="btn btn-primary" id="step2">Step2</button>​
+                    </td>
+                    <td>
+                        <div class="text1"><p>Select Right Service</p></div>
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button data-toggle="modal" data-target="#myModal" class="btn btn-primary" id="step3">Step3</button>​
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+                        <div class="text1">
+                            <ul>
+                                <li>Account (Customer Name)</li>
+                                <li>Continue without Account or Opportunity</li>
+                                <li>Opportunity ID</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- The Modal -->
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+            <div class="modal-content">
+            
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Step Description</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="images"></div>​
+                </div>
+                
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+                
+            </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(".btn-primary").click(function () {
+                var passedID = this.id;//get the id of the selected button
+                console.log(passedID);
+                if(passedID == "step1")
+                {
+                    $('.images').html("<div class='image2'></div>​");
+                }
+                else if(passedID == "step2")
+                {
+                    $('.images').html("<div class='image3'></div>​<br>​<br><div class='image4'></div>");
+                }
+                else if(passedID == "step3")
+                {
+                    $('.images').html("<div class='image5'></div>");
+                }
+            });
+        </script>
+
+    </body>
+</html>
